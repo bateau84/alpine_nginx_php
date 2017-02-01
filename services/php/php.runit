@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+set -x
+
+## Create logfile and set ownership
+touch /var/log/php-fpm.log
+chown abc:abc /var/log/php-fpm.log
+
+## Start php-fpm
+/usr/bin/php-fpm -c /etc/php5/php.ini -y /etc/php5/php-fpm.conf -F -O -R
