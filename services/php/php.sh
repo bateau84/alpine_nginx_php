@@ -2,7 +2,7 @@
 set -e
 set -x
 
-apk --no-cache add php5 php5-common
+apk --no-cache add php5 php5-common php5-fpm php5-json php5-mysqli
 
 ## Copy runit file
 mkdir -p /etc/service/php
